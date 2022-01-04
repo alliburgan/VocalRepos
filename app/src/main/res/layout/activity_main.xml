@@ -6,24 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnPizza"
-        android:layout_width="94dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="sendMessage"
-        android:text="Pizza"
-        app:layout_constraintStart_toStartOf="@+id/txtSentence"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
-
     <TextView
-        android:id="@+id/txtSentence"
-        android:layout_width="332dp"
-        android:layout_height="37dp"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Go"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGo"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear"
+        app:layout_constraintStart_toEndOf="@+id/btnGo" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnFood"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="openKeyboard"
+        android:tag="FoodActivity"
+        android:text="Food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

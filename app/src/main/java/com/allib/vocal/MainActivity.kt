@@ -1,5 +1,6 @@
 package com.allib.vocal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,12 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun sendMessage(view: View) {
+    fun openKeyboard(view: View) {
         // Do something in response to button
-        val clickedText = findViewById<Button>(R.id.btnPizza)
-        val sentence = clickedText.text.toString()
-        findViewById<TextView>(R.id.txtSentence).apply{
-            text = sentence
-        }
+        //val btnID = view.id
+        val btnTag: String = view.tag.toString()
+
+        val intent = Intent(this, FoodActivity::class.java)
+        //val intent = Intent(this, Class.forName(btnTag).javaClass)
+
+        startActivity(intent)
+
     }
 }
