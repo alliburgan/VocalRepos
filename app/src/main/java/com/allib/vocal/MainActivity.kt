@@ -15,11 +15,13 @@ class MainActivity : AppCompatActivity() {
 
     fun openKeyboard(view: View) {
         // Do something in response to button
-        //val btnID = view.id
-        val btnTag: String = view.tag.toString()
+//val intent = Intent(this, Class.forName(btnTag).javaClass)
+//
+ val btnTag: String = view.tag.toString()
 
         val intent = Intent(this, FoodActivity::class.java)
-        //val intent = Intent(this, Class.forName(btnTag).javaClass)
+
+
 
         startActivity(intent)
 
