@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtSentence"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:text="Go"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
         android:id="@+id/btnDelete"
@@ -52,7 +52,19 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:onClick="openKeyboard"
+        android:onClick="openFoodKeyboard"
+        android:tag="FoodActivity"
+        android:text="Food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGo" />
+
+    <Button
+        android:id="@+id/btnEmotions"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="openFoodKeyboard"
         android:tag="FoodActivity"
         android:text="Food"
         app:layout_constraintStart_toStartOf="parent"
