@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Vocal</string>
+    <string name="Pizza">pizza</string>
+    <string name="Milk">milk</string>
+    <string name="Pasta">pasta</string>
+    <string name="Delete">delete</string>
+    <string name="Clear">clear</string>
+    <string name="Go">go</string>
+    <string name="Food">food</string>
+    <string name="Emotions">emotions</string>
+
 </resources>
