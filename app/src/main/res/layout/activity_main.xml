@@ -53,7 +53,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:onClick="openFoodKeyboard"
-        android:tag="FoodActivity"
         android:text="Food"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGo" />
@@ -63,12 +62,10 @@
         android:layout_width="113dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:onClick="openFoodKeyboard"
-        android:tag="FoodActivity"
-        android:text="Food"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGo" />
+        android:text="Emotions"
+        app:layout_constraintStart_toEndOf="@+id/btnFood"
+        app:layout_constraintTop_toTopOf="@+id/btnFood" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

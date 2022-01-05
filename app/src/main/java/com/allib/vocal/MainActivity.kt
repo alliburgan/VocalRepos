@@ -15,4 +15,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, FoodActivity::class.java)
         startActivity(intent)
     }
+
+    fun openEmotionsKeyboard(view: View) {
+        val intent = Intent(this, EmotionsActivity::class.java)
+        startActivity(intent)
+    }
 }
