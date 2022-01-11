@@ -16,28 +16,38 @@ class FoodActivity : AppCompatActivity() {
     }
 
     fun btnClick(view: View) {
+        //which button it is//
         val btnID = view.id
+        //saves text of button if clicked in that variable//
         val clickedText = findViewById<Button>(btnID)
-
+//adds the clicked text to the array list//
         words.add(clickedText.text.toString())
+        //runs method//
         makeSentence()
     }
 
     private fun makeSentence() {
+        //sets to empty string//
         sentence = ""
+        //adds each word in array list to the sentence//
         for (i in words.indices) {
             sentence += words[i] + " "
         }
+        //finds the sentence bar//
         findViewById<TextView>(R.id.txtSentence).apply {
+            //changes the text in sentence bar//
             text = sentence
         }
     }
     fun clear(view: View){
+        //clears words//
         words.clear()
+        //runs makeSentence method//
         makeSentence()
     }
 
     fun delete(view: View) {
+        //removes the last word in words and runs maekSentence method//
         words.removeAt(words.size-1)
         makeSentence()
     }
