@@ -7,11 +7,11 @@ import android.widget.Button
 import android.widget.TextView
 var words = arrayListOf<String>()
 var sentence = ""
+
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
-
         //matisseTests
     }
 
@@ -28,7 +28,7 @@ class FoodActivity : AppCompatActivity() {
         for (i in words.indices) {
             sentence += words[i] + " "
         }
-        findViewById<TextView>(R.id.txtSentence).apply {
+        findViewById<TextView>(R.id.txtSentenceFood).apply {
             text = sentence
         }
     }
