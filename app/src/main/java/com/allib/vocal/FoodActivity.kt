@@ -1,5 +1,6 @@
 package com.allib.vocal
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,8 +13,8 @@ class FoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-        //matisseTests
     }
+    //final MediaPlayer mp = MediaPlayer.create(this, R.raw.pizza)
 
     fun btnClick(view: View) {
         val btnID = view.id
@@ -21,6 +22,12 @@ class FoodActivity : AppCompatActivity() {
 
         words.add(clickedText.text.toString())
         makeSentence()
+
+        val sounds = MediaPlayer.create(this, R.raw.pizza)
+
+        sounds.start()
+
+
     }
 
     private fun makeSentence() {
