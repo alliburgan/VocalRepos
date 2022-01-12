@@ -8,9 +8,9 @@
     tools:context=".FoodActivity">
 
     <TextView
-        android:id="@+id/txtSentence"
+        android:id="@+id/txtSentenceFood"
         android:layout_width="0dp"
-        android:layout_height="41dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -30,7 +30,7 @@
         android:onClick="btnClick"
         android:text="@string/Pizza"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentenceFood" />
 
     <Button
         android:id="@+id/milk"
@@ -54,18 +54,18 @@
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="71dp"
+        android:layout_width="70dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:onClick="delete"
         android:text="@string/Delete"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSentence"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSentenceFood"
         app:layout_constraintEnd_toStartOf="@+id/btnClear" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="72dp"
-        android:layout_height="41dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:onClick="clear"
         android:text="@string/Clear"

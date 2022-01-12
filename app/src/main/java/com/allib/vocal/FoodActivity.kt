@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 var words = arrayListOf<String>()
 var sentence = ""
+
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +41,7 @@ class FoodActivity : AppCompatActivity() {
         for (i in words.indices) {
             sentence += words[i] + " "
         }
-        //finds the sentence bar//
-        findViewById<TextView>(R.id.txtSentence).apply {
-            //changes the text in sentence bar//
+
             text = sentence
         }
     }

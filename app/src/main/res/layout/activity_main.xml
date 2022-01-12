@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtSentence"
+        android:id="@+id/txtSentenceFood"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/Go"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentenceFood" />
 
     <Button
         android:id="@+id/btnDelete"
