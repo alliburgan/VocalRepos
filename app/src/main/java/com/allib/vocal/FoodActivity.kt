@@ -53,7 +53,7 @@ class FoodActivity : AppCompatActivity() {
     }
 
     fun delete(view: View) {
-        //removes the last word in words and runs maekSentence method//
+        //removes the last word in words and runs makeSentence method//
         words.removeAt(words.size-1)
         makeSentence()
     }
