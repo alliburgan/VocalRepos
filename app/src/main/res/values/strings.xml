@@ -7,6 +7,8 @@
     <string name="Clear">clear</string>
     <string name="Go">go</string>
     <string name="Food">food</string>
+    <string name="Chips">chips</string>
+    <string name="Cake">cake</string>
+    <string name="Apple">apple</string>
     <string name="Emotions">emotions</string>
-
 </resources>
