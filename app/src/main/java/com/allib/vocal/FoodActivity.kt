@@ -41,7 +41,7 @@ class FoodActivity : AppCompatActivity() {
         for (i in words.indices) {
             sentence += words[i] + " "
         }
-
+        findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
     }
