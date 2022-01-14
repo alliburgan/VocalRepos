@@ -12,40 +12,68 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
         android:text=""
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/pizza"
-        android:layout_width="94dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="btnClick"
-        android:drawableTop="@drawable/pizza"
-        android:text="@string/Pizza"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceFood" />
 
     <Button
         android:id="@+id/milk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:onClick="btnClick"
         android:text="@string/Milk"
-        app:layout_constraintBottom_toBottomOf="@+id/pizza"
-        app:layout_constraintStart_toEndOf="@+id/pizza" />
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/milk3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="@string/Milk"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/btnApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Apple"
+        app:layout_constraintStart_toEndOf="@+id/btnCake"
+        app:layout_constraintTop_toBottomOf="@+id/pasta" />
+
+    <Button
+        android:id="@+id/btnCake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Cake"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/milk" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Chips"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="276dp" />
 
     <Button
         android:id="@+id/pasta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="4dp"
         android:onClick="btnClick"
         android:text="@string/Pasta"
         app:layout_constraintBottom_toBottomOf="@+id/milk"
@@ -54,52 +82,37 @@
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="70dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="16dp"
         android:onClick="delete"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
         android:text="@string/Delete"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSentenceFood"
-        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGo" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="72dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="16dp"
         android:onClick="clear"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/Clear"
-        app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="btnClick"
-        android:text="@string/Chips"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pizza" />
+        android:id="@+id/btnGo"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/Go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnCake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="btnClick"
-        android:text="@string/Cake"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/milk" />
-
-    <Button
-        android:id="@+id/btnApple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Apple"
-        app:layout_constraintStart_toEndOf="@+id/btnCake"
-        app:layout_constraintTop_toBottomOf="@+id/pasta" />
 </androidx.constraintlayout.widget.ConstraintLayout>
