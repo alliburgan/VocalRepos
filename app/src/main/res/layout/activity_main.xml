@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +26,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#2AD324"
         android:text="@string/Go"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentenceFood" />
 
@@ -32,7 +36,9 @@
         android:id="@+id/btnDelete"
         android:layout_width="113dp"
         android:layout_height="49dp"
+        android:backgroundTint="#FF7B23"
         android:text="@string/Delete"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btnGo"
         app:layout_constraintEnd_toStartOf="@+id/btnClear"
         app:layout_constraintStart_toEndOf="@+id/btnGo" />
@@ -42,16 +48,21 @@
         android:layout_width="113dp"
         android:layout_height="49dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#FD0000"
         android:text="@string/Clear"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnFood"
-        android:layout_width="113dp"
-        android:layout_height="49dp"
+        android:layout_width="122dp"
+        android:layout_height="97dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/foodfolder"
+        android:includeFontPadding="false"
         android:onClick="openFoodKeyboard"
         android:text="@string/Food"
         app:layout_constraintStart_toStartOf="parent"
