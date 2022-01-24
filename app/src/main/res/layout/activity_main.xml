@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".MainActivity">
 
     <TextView
@@ -56,12 +57,12 @@
 
     <Button
         android:id="@+id/btnFood"
-        android:layout_width="122dp"
-        android:layout_height="97dp"
+        android:layout_width="115dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        android:foreground="@drawable/foodfolder"
+        android:foreground="@drawable/littlefoodfolder"
         android:includeFontPadding="false"
         android:onClick="openFoodKeyboard"
         android:text="@string/Food"
@@ -73,6 +74,8 @@
         android:layout_width="113dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/untitled_artwork_3"
         android:onClick="openEmotionsKeyboard"
         android:text="@string/Emotions"
         app:layout_constraintStart_toEndOf="@+id/btnFood"
