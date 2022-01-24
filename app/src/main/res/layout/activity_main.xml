@@ -71,11 +71,11 @@
 
     <Button
         android:id="@+id/btnEmotions"
-        android:layout_width="113dp"
-        android:layout_height="49dp"
+        android:layout_width="119dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="#000000"
-        android:foreground="@drawable/untitled_artwork_3"
+        android:foreground="@drawable/emotions"
         android:onClick="openEmotionsKeyboard"
         android:text="@string/Emotions"
         app:layout_constraintStart_toEndOf="@+id/btnFood"
