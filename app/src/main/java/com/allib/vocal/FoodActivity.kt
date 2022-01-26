@@ -22,16 +22,12 @@ class FoodActivity : AppCompatActivity() {
         val btnID = view.id
         //saves text of button if clicked in that variable//
         val clickedText = findViewById<Button>(btnID)
-//adds the clicked text to the array list//
+        //adds the clicked text to the array list//
         words.add(clickedText.text.toString())
         //runs method//
         makeSentence()
-
         val sounds = MediaPlayer.create(this, R.raw.pizza)
-
         sounds.start()
-
-
     }
 
     private fun makeSentence() {
@@ -51,9 +47,8 @@ class FoodActivity : AppCompatActivity() {
         //runs makeSentence method//
         makeSentence()
     }
-
     fun delete(view: View) {
-        //removes the last word in words and runs maekSentence method//
+        //removes the last word in words and runs makeSentence method//
         words.removeAt(words.size-1)
         makeSentence()
     }
