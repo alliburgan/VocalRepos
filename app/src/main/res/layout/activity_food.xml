@@ -27,6 +27,8 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/pizza"
         android:onClick="btnClick"
         android:text="@string/Pizza"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +51,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/pasta"
         android:onClick="btnClick"
         android:text="@string/Pasta"
         app:layout_constraintBottom_toBottomOf="@+id/milk"
@@ -88,6 +92,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:text="@string/Cake"
         app:layout_constraintStart_toEndOf="@+id/btnChips"
@@ -99,6 +104,8 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/apple"
         android:text="@string/Apple"
         app:layout_constraintStart_toEndOf="@+id/btnCake"
         app:layout_constraintTop_toBottomOf="@+id/pasta" />
@@ -109,8 +116,11 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/chips"
         android:onClick="btnClick"
         android:text="@string/Chips"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pizza" />
 </androidx.constraintlayout.widget.ConstraintLayout>
