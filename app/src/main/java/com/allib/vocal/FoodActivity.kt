@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-var words = arrayListOf<String>()
-var sentence = ""
+public var words = arrayListOf<String>()
+public var sentence = ""
 
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +20,12 @@ class FoodActivity : AppCompatActivity() {
     fun btnClick(view: View) {
         //which button it is//
         val btnID = view.id
+        val btnTag = view.tag
         //saves text of button if clicked in that variable//
-        val clickedText = findViewById<Button>(btnID)
+        //val clickedText = findViewById<Button>(btnID)
         //adds the clicked text to the array list//
-        words.add(clickedText.text.toString())
+        //words.add(clickedText.text.toString())
+        words.add(btnTag.toString())
         //runs method//
         makeSentence()
         val sounds = MediaPlayer.create(this, R.raw.pizza)
