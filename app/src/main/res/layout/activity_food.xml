@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/pizza"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/milk"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/milk"
@@ -49,7 +49,7 @@
     <Button
         android:id="@+id/pasta"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/pasta"
@@ -101,7 +101,7 @@
     <Button
         android:id="@+id/btnApple"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
@@ -113,7 +113,7 @@
     <Button
         android:id="@+id/btnChips"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
