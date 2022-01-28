@@ -17,7 +17,6 @@ class EmotionsActivity : AppCompatActivity() {
     fun btnClick(view: View) {
         val btnID = view.id
         val clickedText = findViewById<Button>(btnID)
-
         words.add(clickedText.text.toString())
         makeSentence()
     }
@@ -26,6 +25,9 @@ class EmotionsActivity : AppCompatActivity() {
         sentence = ""
         for (i in words.indices) {
             sentence += words[i] + " "
+        }
+        findViewById<TextView>(R.id.txtSentenceEmotions).apply {
+            text = sentence
         }
         findViewById<TextView>(R.id.txtSentenceFood).apply {
             text = sentence
