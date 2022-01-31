@@ -4,31 +4,53 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
-public var words = arrayListOf<String>()
-public var sentence = ""
+var words = arrayListOf<String>()
+var sentence = ""
 
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
+    makeSentence()
 
     }
-    //final MediaPlayer mp = MediaPlayer.create(this, R.raw.pizza)
 
     fun btnClick(view: View) {
-        //which button it is//
-        val btnID = view.id
+        // find which button it is
         val btnTag = view.tag
-        //saves text of button if clicked in that variable//
-        //val clickedText = findViewById<Button>(btnID)
-        //adds the clicked text to the array list//
-        //words.add(clickedText.text.toString())
+        // add the corresponding word to the arraylist words
         words.add(btnTag.toString())
-        //runs method//
+        // run the makeSentence method
         makeSentence()
-        val sounds = MediaPlayer.create(this, R.raw.pizza)
+
+        // first attempt at using audio files
+        //var sounds = MediaPlayer.create(this, R.raw.friend)
+
+        // volume glitch?
+        //volumeControlStream = AudioManager.STREAM_MUSIC
+
+        val sounds = when {
+            btnTag.equals("pizza") -> {
+               MediaPlayer.create(this, R.raw.pizza)
+            }
+            btnTag.equals("chips") -> {
+                MediaPlayer.create(this, R.raw.chips)
+
+            }
+            btnTag.equals("pasta") -> {
+                MediaPlayer.create(this, R.raw.pasta)
+
+            }
+            btnTag.equals("milk") -> {
+                MediaPlayer.create(this, R.raw.milk)
+
+            }
+            else -> {
+                MediaPlayer.create(this, R.raw.angry)
+
+            }
+        }
         sounds.start()
     }
 
@@ -39,7 +61,7 @@ class FoodActivity : AppCompatActivity() {
         for (i in words.indices) {
             sentence += words[i] + " "
         }
-        findViewById<TextView>(R.id.txtSentence).apply {
+        findViewById<TextView>(R.id.txtSentenceFood).apply {
             text = sentence
         }
     }

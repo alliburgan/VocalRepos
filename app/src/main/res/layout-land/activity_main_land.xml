@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:backgroundTint="#000000"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:id="@+id/txtSentenceFood"
@@ -57,8 +58,8 @@
 
     <Button
         android:id="@+id/btnFood"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="115dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
@@ -71,8 +72,8 @@
 
     <Button
         android:id="@+id/btnEmotions"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="119dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/emotions"

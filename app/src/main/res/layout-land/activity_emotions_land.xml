@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmotionsActivity">
+    tools:context=".EmotionsActivity"
+    tools:ignore="MissingDefaultResource">
 
     <Button
-        android:id="@+id/btnHappy"
-        android:tag="happy"
+        android:id="@+id/pasta2"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:onClick="btnClick"
-        android:text="Happy"
+        android:text="@string/Pasta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
 

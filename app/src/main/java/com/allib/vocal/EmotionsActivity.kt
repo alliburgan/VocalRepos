@@ -10,14 +10,16 @@ class EmotionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emotions)
+    makeSentence()
 
-        // tester
     }
 
     fun btnClick(view: View) {
         val btnID = view.id
-        val clickedText = findViewById<Button>(btnID)
-        words.add(clickedText.text.toString())
+        val btnTag = view.tag
+        //val clickedText = findViewById<Button>(btnID)
+        //words.add(clickedText.text.toString())
+        words.add(btnTag.toString())
         makeSentence()
     }
 
@@ -27,9 +29,6 @@ class EmotionsActivity : AppCompatActivity() {
             sentence += words[i] + " "
         }
         findViewById<TextView>(R.id.txtSentenceEmotions).apply {
-            text = sentence
-        }
-        findViewById<TextView>(R.id.txtSentenceFood).apply {
             text = sentence
         }
     }
