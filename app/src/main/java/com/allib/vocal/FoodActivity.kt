@@ -1,12 +1,15 @@
 package com.allib.vocal
 
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 var words = arrayListOf<String>()
 var sentence = ""
+
+
 
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,25 +33,27 @@ class FoodActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
+
         val sounds = when {
             btnTag.equals("pizza") -> {
-               MediaPlayer.create(this, R.raw.pizza)
+               MediaPlayer.create(this, R.raw.pizza).setVolume(100.0f,100.0f)
+                MediaPlayer.create(this, R.raw.pizza)
             }
             btnTag.equals("chips") -> {
+                MediaPlayer.create(this, R.raw.chips).setVolume(1.5f,1.5f)
                 MediaPlayer.create(this, R.raw.chips)
-
             }
             btnTag.equals("pasta") -> {
+                MediaPlayer.create(this, R.raw.pasta).setVolume(1.0f,1.0f)
                 MediaPlayer.create(this, R.raw.pasta)
-
             }
             btnTag.equals("milk") -> {
+                MediaPlayer.create(this, R.raw.milk).setVolume(1.0f,1.0f)
                 MediaPlayer.create(this, R.raw.milk)
-
             }
             else -> {
+                MediaPlayer.create(this, R.raw.angry).setVolume(1.0f,1.0f)
                 MediaPlayer.create(this, R.raw.angry)
-
             }
         }
         sounds.start()
@@ -61,10 +66,12 @@ class FoodActivity : AppCompatActivity() {
         for (i in words.indices) {
             sentence += words[i] + " "
         }
-        findViewById<TextView>(R.id.txtSentenceFood).apply {
+        findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
     }
+
+
     fun clear(view: View){
         //clears words//
         words.clear()
