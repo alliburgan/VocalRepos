@@ -11,4 +11,15 @@
     <string name="Cake">cake</string>
     <string name="Apple">apple</string>
     <string name="Emotions">emotions</string>
+    <string name="Sad">sad</string>
+    <string name="Happy">happy</string>
+    <string name="Mad">mad</string>
+    <string name="Excited">excited</string>
+    <string name="Angry">angry</string>
+    <string name="Scared">scared</string>
+    <string name="Mom">mom</string>
+    <string name="Dad">dad</string>
+    <string name="Teacher">teacher</string>
+    <string name="Doctor">doctor</string>
+    <string name="Friend">friend</string>
 </resources>

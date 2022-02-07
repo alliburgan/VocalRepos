@@ -8,6 +8,50 @@
     tools:context=".EmotionsActivity">
 
     <Button
+        android:id="@+id/btnScared"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Scared"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/btnAngry"
+        app:layout_constraintTop_toBottomOf="@+id/btnMad" />
+
+    <Button
+        android:id="@+id/btnAngry"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Angry"
+        app:layout_constraintStart_toEndOf="@+id/btnExcited"
+        app:layout_constraintTop_toBottomOf="@+id/btnSad" />
+
+    <Button
+        android:id="@+id/btnExcited"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Excited"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHappy" />
+
+    <Button
+        android:id="@+id/btnMad"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="@string/Mad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSad"
+        app:layout_constraintTop_toTopOf="@+id/btnSad" />
+
+    <Button
         android:id="@+id/btnHappy"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
@@ -15,18 +59,18 @@
         android:layout_marginTop="27dp"
         android:onClick="btnClick"
         android:tag="happy"
-        android:text="Happy"
+        android:text="@string/Happy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
 
     <Button
-        android:id="@+id/milk2"
+        android:id="@+id/btnSad"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="172dp"
         android:onClick="btnClick"
-        android:text="@string/Milk"
+        android:text="@string/Sad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
 
@@ -70,6 +114,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
 
+        android:background="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
