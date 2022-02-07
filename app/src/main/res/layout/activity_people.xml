@@ -4,6 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".PeopleActivity">
+
+    <Button
+        android:id="@+id/btnFriend"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Friend"
+        app:layout_constraintTop_toBottomOf="@+id/btnDad"
+        tools:layout_editor_absoluteX="155dp" />
+
+    <Button
+        android:id="@+id/btnSister"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Sister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFriend"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeacher" />
+
+    <Button
+        android:id="@+id/btnDoctor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Doctor"
+        app:layout_constraintEnd_toStartOf="@+id/btnFriend"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMom" />
+
+    <Button
+        android:id="@+id/btnTeacher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Teacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDad"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <Button
+        android:id="@+id/btnDad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Dad"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <TextView
+        android:id="@+id/txtSentence4"
+        android:layout_width="218dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete5"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDelete5"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FF7B23"
+        android:onClick="delete"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Delete"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSentence4"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear4" />
+
+    <Button
+        android:id="@+id/btnClear4"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#FD0000"
+        android:onClick="clear"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Clear"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnMom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Mom"
+        app:layout_constraintEnd_toStartOf="@+id/btnDad"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="97dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
