@@ -8,32 +8,13 @@
     tools:context=".PeopleActivity">
 
     <Button
-        android:id="@+id/btnFriend"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:text="Friend"
-        app:layout_constraintTop_toBottomOf="@+id/btnDad"
-        tools:layout_editor_absoluteX="155dp" />
-
-    <Button
-        android:id="@+id/btnSister"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:text="Sister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnFriend"
-        app:layout_constraintTop_toBottomOf="@+id/btnTeacher" />
-
-    <Button
         android:id="@+id/btnDoctor"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Doctor"
         app:layout_constraintEnd_toStartOf="@+id/btnFriend"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMom" />
 
@@ -42,17 +23,41 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:text="Teacher"
+        app:layout_constraintBottom_toTopOf="@+id/btnFriend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnDad"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintTop_toTopOf="@+id/btnDad"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnDad"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:text="Dad"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnMom"
+        app:layout_constraintEnd_toStartOf="@+id/btnFriend"
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnFriend"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:text="Friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
+
+    <Button
+        android:id="@+id/btnMom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:text="Mom"
+        app:layout_constraintEnd_toStartOf="@+id/btnDad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence4" />
 
     <TextView
         android:id="@+id/txtSentence4"
@@ -93,14 +98,5 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btnDelete5"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnMom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="Mom"
-        app:layout_constraintEnd_toStartOf="@+id/btnDad"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="97dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
