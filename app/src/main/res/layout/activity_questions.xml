@@ -4,6 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".QuestionsActivity">
 
+    <Button
+        android:id="@+id/btnWhy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Why"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWhere"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhat"
+        tools:layout_editor_absoluteX="155dp" />
+
+    <Button
+        android:id="@+id/btnHow"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/How"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toEndOf="@+id/btnWhy"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhen" />
+
+    <Button
+        android:id="@+id/btnWhere"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Where"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhy"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWho" />
+
+    <Button
+        android:id="@+id/btnWhen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/When"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnWhat" />
+
+    <Button
+        android:id="@+id/btnWho"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/Who"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhat"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/btnWhat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/What"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWho"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhen"
+        app:layout_constraintTop_toTopOf="@+id/btnWho" />
+
+    <Button
+        android:id="@+id/btnDelete4"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FF7B23"
+        android:onClick="delete"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Delete"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear3"
+        app:layout_constraintStart_toEndOf="@+id/txtSentence2"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btnClear3"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FD0000"
+        android:onClick="clear"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Clear"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSentence2"
+        android:layout_width="208dp"
+        android:layout_height="46dp"
+        android:background="#FFFFFF"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete4"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear3"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

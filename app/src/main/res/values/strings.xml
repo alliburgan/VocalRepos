@@ -22,4 +22,13 @@
     <string name="Teacher">teacher</string>
     <string name="Doctor">doctor</string>
     <string name="Friend">friend</string>
+    <string name="Questions">questions</string>
+    <string name="Who">who</string>
+    <string name="What">what</string>
+    <string name="When">when</string>
+    <string name="Where">where</string>
+    <string name="Why">why</string>
+    <string name="How">How</string>
+    <string name="People">people</string>
+    <string name="Verbs">verbs</string>
 </resources>

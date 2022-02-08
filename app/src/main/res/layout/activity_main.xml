@@ -17,7 +17,7 @@
         android:backgroundTint="#36C6B9"
         android:includeFontPadding="false"
         android:onClick="openQuestionsKeyboard"
-        android:text="Questions"
+        android:text="@string/Questions"
         app:layout_constraintStart_toBottomOf="@+id/btnPeople"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
@@ -31,7 +31,7 @@
         android:backgroundTint="#36C6B9"
         android:includeFontPadding="false"
         android:onClick="openPeopleKeyboard"
-        android:text="People"
+        android:text="@string/People"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFood" />
 
@@ -115,10 +115,11 @@
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#36C6B9"
+        android:backgroundTint="@color/black"
+        android:foreground="@drawable/verb"
         android:includeFontPadding="false"
         android:onClick="openVerbsKeyboard"
-        android:text="Verbs"
+        android:text="@string/Verbs"
         app:layout_constraintStart_toEndOf="@+id/btnPeople"
         app:layout_constraintTop_toBottomOf="@+id/btnEmotions" />
 </androidx.constraintlayout.widget.ConstraintLayout>
