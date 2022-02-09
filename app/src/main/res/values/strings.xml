@@ -31,4 +31,11 @@
     <string name="How">How</string>
     <string name="People">people</string>
     <string name="Verbs">verbs</string>
+    <string name="Is">is</string>
+    <string name="Do">do</string>
+    <string name="Need">need</string>
+    <string name="Have">have</string>
+    <string name="Want">want</string>
+    <string name="Come">come</string>
+    <string name="Get">get</string>
 </resources>
