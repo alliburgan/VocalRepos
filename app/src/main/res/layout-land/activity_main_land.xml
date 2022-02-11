@@ -8,7 +8,11 @@
     android:backgroundTint="#000000"
     android:foregroundGravity="fill_horizontal"
     tools:context=".MainActivity"
-    tools:ignore="MissingDefaultResource">
+    tools:ignore="MissingDefaultResource"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android
+http://schemas.android.com/apk/res-auto
+http://schemas.android.com/tools ">
 
     <TextView
         android:id="@+id/txtSentenceFood"
