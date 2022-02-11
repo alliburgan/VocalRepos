@@ -12,4 +12,6 @@
     <string name="Apple">apple</string>
     <string name="Emotions">emotions</string>
     <string name="Questions">questions</string>
+    <string name="People">people</string>
+    <string name="Verbs">verbs</string>
 </resources>
