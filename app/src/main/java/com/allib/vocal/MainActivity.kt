@@ -57,9 +57,9 @@ class MainActivity : AppCompatActivity() {
             testPlaylist?.setOnCompletionListener(OnCompletionListener
             {
                 testPlaylist = MediaPlayer.create(this, playlist[i])
-                testPlaylist?.start()
 
             })
+            testPlaylist?.start()
 
         }
     }
