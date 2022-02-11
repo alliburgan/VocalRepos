@@ -52,7 +52,7 @@ class FoodActivity : AppCompatActivity() {
                 MediaPlayer.create(this, R.raw.milk)
             }
             else -> {
-                MediaPlayer.create(this, R.raw.angry)
+                MediaPlayer.create(this, R.raw.doctor)
             }
         }
         sounds.start()

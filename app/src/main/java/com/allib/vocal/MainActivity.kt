@@ -2,9 +2,12 @@ package com.allib.vocal
 
 import android.content.Intent
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
+import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+
+private var mediaPlayer: MediaPlayer? = null
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,19 +40,32 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-        fun go(view: View) {
-            var playlist = ArrayList<Int>()
+    fun go(view: View) {
 
-            playlist.add(R.raw.excited)
-            playlist.add(R.raw.scared)
-            playlist.add(R.raw.sad)
+        var playlist = ArrayList<Int>()
 
+        playlist.add(R.raw.excited)
+        playlist.add(R.raw.scared)
+        playlist.add(R.raw.sad)
 
-            for (i in playlist.indices) {
-                var testPlaylist = MediaPlayer.create(this, playlist[i])
-                testPlaylist.start()
-            }
+        var testPlaylist = MediaPlayer.create(this, playlist[0])
+
+        testPlaylist.start()
+
+        for (i in playlist.indices) {
+
+            testPlaylist?.setOnCompletionListener(OnCompletionListener
+            {
+                testPlaylist = MediaPlayer.create(this, playlist[i])
+                testPlaylist?.start()
+
+            })
+
         }
     }
+}
+
+
+
 
 //hehe im here now
