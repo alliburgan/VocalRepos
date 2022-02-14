@@ -27,7 +27,6 @@ class QuestionsActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
-
     }
 
     private fun makeSentence() {
@@ -41,7 +40,6 @@ class QuestionsActivity : AppCompatActivity() {
             text = sentence
         }
     }
-
 
     fun clear(view: View){
         //clears words//
