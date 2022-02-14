@@ -97,6 +97,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
+        android:foreground="@drawable/cake__1__removebg_preview"
         android:onClick="btnClick"
         android:tag="cake"
         app:layout_constraintStart_toEndOf="@+id/btnChips"
