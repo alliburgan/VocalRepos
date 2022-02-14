@@ -10,9 +10,7 @@ class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
-        makeSentence()
-        }
-
+    }
     fun btnClick(view: View) {
         // find which button it is
         val btnTag = view.tag
@@ -27,8 +25,37 @@ class QuestionsActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
-
+/*
+        val sounds = when {
+            btnTag.equals("who") -> {
+                MediaPlayer.create(this, R.raw.who).setVolume(100.0f,100.0f)
+                MediaPlayer.create(this, R.raw.who)
+            }
+            btnTag.equals("what") -> {
+                MediaPlayer.create(this, R.raw.what).setVolume(1.5f,1.5f)
+                MediaPlayer.create(this, R.raw.what)
+            }
+            btnTag.equals("when") -> {
+                MediaPlayer.create(this, R.raw.whenq).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.whenq)
+            }
+            btnTag.equals("where") -> {
+                MediaPlayer.create(this, R.raw.where).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.where)
+            }
+            btnTag.equals("why") -> {
+                MediaPlayer.create(this, R.raw.why).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.why)
+            }
+            else -> {
+                MediaPlayer.create(this, R.raw.how).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.how)
+            }
+        }
+        sounds.start()
+    */
     }
+
 
     private fun makeSentence() {
         //sets to empty string//

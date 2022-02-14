@@ -1,5 +1,6 @@
 package com.allib.vocal
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,31 +15,73 @@ class EmotionsActivity : AppCompatActivity() {
 
     }
 
-    fun btnClick(view: View) {
-        val btnID = view.id
-        val btnTag = view.tag
-        //val clickedText = findViewById<Button>(btnID)
-        //words.add(clickedText.text.toString())
-        words.add(btnTag.toString())
-        makeSentence()
-    }
+        fun btnClick(view: View) {
+            // find which button it is
+            val btnTag = view.tag
+            // add the corresponding word to the arraylist words
+            words.add(btnTag.toString())
+            // run the makeSentence method
+            makeSentence()
 
-    private fun makeSentence() {
-        sentence = ""
-        for (i in words.indices) {
-            sentence += words[i] + " "
-        }
-        findViewById<TextView>(R.id.txtSentenceEmotions).apply {
-            text = sentence
-        }
-    }
-    fun clear(view: View){
-        words.clear()
-        makeSentence()
-    }
+            // first attempt at using audio files
+            //var sounds = MediaPlayer.create(this, R.raw.friend)
 
-    fun delete(view: View) {
-        words.removeAt(words.size-1)
-        makeSentence()
-    }
+            // volume glitch?
+            //volumeControlStream = AudioManager.STREAM_MUSIC
+
+
+            val sounds = when {
+                btnTag.equals("sad") -> {
+                    MediaPlayer.create(this, R.raw.sad).setVolume(100.0f,100.0f)
+                    MediaPlayer.create(this, R.raw.sad)
+                }
+                /*
+                btnTag.equals("mad") -> {
+                    MediaPlayer.create(this, R.raw.mad).setVolume(1.5f,1.5f)
+                    MediaPlayer.create(this, R.raw.mad)
+                } */
+                btnTag.equals("excited") -> {
+                    MediaPlayer.create(this, R.raw.excited).setVolume(1.0f,1.0f)
+                    MediaPlayer.create(this, R.raw.excited)
+                }
+                btnTag.equals("happy") -> {
+                    MediaPlayer.create(this, R.raw.happy).setVolume(1.0f,1.0f)
+                    MediaPlayer.create(this, R.raw.happy)
+                }
+                btnTag.equals("angry") -> {
+                    MediaPlayer.create(this, R.raw.angry).setVolume(1.0f, 1.0f)
+                    MediaPlayer.create(this, R.raw.angry)
+                }
+                else -> {
+                    MediaPlayer.create(this, R.raw.scared).setVolume(1.0f,1.0f)
+                    MediaPlayer.create(this, R.raw.scared)
+                }
+            }
+            sounds.start()
+        }
+
+        private fun makeSentence() {
+            //sets to empty string//
+            sentence = ""
+            //adds each word in array list to the sentence//
+            for (i in words.indices) {
+                sentence += words[i] + " "
+            }
+            findViewById<TextView>(R.id.txtSentence).apply {
+                text = sentence
+            }
+        }
+
+
+        fun clear(view: View){
+            //clears words//
+            words.clear()
+            //runs makeSentence method//
+            makeSentence()
+        }
+        fun delete(view: View) {
+            //removes the last word in words and runs makeSentence method//
+            words.removeAt(words.size-1)
+            makeSentence()
+        }
 }

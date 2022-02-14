@@ -2,135 +2,118 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".FoodActivity">
+    android:background="@color/black"
+    tools:context=".QuestionsActivity">
+
+    <Button
+        android:id="@+id/btnWhy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Why"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWhere"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhat"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnWhat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/What"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWho"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhen"
+        app:layout_constraintTop_toTopOf="@+id/btnWho"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnWhere"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/Where"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhy"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWho" />
 
     <TextView
-        android:id="@+id/txtSentence"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/txtSentence2"
+        android:layout_width="208dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="4dp"
         android:background="#FFFFFF"
         android:text=""
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete4"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear3"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="71dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#FF7B23"
-        android:onClick="delete"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:text="@string/Delete"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSentence"
-        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
-
-    <Button
-        android:id="@+id/btnClear"
+        android:id="@+id/btnClear3"
         android:layout_width="72dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#FD0000"
         android:onClick="clear"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:text="@string/Clear"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete4"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnHow"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="How"
-        android:text="How"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence"
-        tools:ignore="SpeakableTextPresentCheck"
-        />
-    <!--android:foreground="@drawable/How"-->
-
-    <Button
-        android:id="@+id/btnWhat"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="What"
-        android:text="What"
-        app:layout_constraintBottom_toBottomOf="@+id/btnHow"
-        app:layout_constraintStart_toEndOf="@+id/btnHow"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnWho"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="Who"
-        android:text="Who"
-        app:layout_constraintBottom_toBottomOf="@+id/btnWhat"
-        app:layout_constraintStart_toEndOf="@+id/btnWhat"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_marginTop="28dp"
+        android:text="@string/Who"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhat"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence2" />
+
+    <Button
+        android:id="@+id/btnDelete4"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF7B23"
+        android:onClick="delete"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Delete"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear3"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/txtSentence2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnWhen"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="When"
-        android:text="When"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/When"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnWhat" />
+
+    <Button
+        android:id="@+id/btnHow"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/How"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toEndOf="@+id/btnWhy"
-        app:layout_constraintTop_toBottomOf="@+id/btnWhat"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/btnWhen" />
 
-    <Button
-        android:id="@+id/btnWhere"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="Where"
-        android:text="Where"
-        app:layout_constraintStart_toEndOf="@+id/btnWhen"
-        app:layout_constraintTop_toBottomOf="@+id/btnWho"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/btnWhy"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#000000"
-        android:onClick="btnClick"
-        android:tag="Why"
-        android:text="Why"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHow"
-        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
