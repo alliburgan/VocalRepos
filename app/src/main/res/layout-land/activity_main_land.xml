@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.504" />
 
     <TextView
-        android:id="@+id/txtSentenceFood"
+        android:id="@+id/txtSentence"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"

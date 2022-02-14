@@ -34,25 +34,35 @@ class FoodActivity : AppCompatActivity() {
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
 
-        val sounds = when {
+        var sounds: MediaPlayer? = null
+        when {
             btnTag.equals("pizza") -> {
                MediaPlayer.create(this, R.raw.pizza).setVolume(100.0f,100.0f)
-                MediaPlayer.create(this, R.raw.pizza)
+                sounds = MediaPlayer.create(this, R.raw.pizza)
+                playlist.add(R.raw.pizza)
             }
             btnTag.equals("chips") -> {
                 MediaPlayer.create(this, R.raw.chips).setVolume(1.5f,1.5f)
-                MediaPlayer.create(this, R.raw.chips)
+                sounds = MediaPlayer.create(this, R.raw.chips)
+                playlist.add(R.raw.chips)
+
             }
             btnTag.equals("pasta") -> {
                 MediaPlayer.create(this, R.raw.pasta).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.pasta)
+                sounds = MediaPlayer.create(this, R.raw.pasta)
+                playlist.add(R.raw.pasta)
+
             }
             btnTag.equals("milk") -> {
                 MediaPlayer.create(this, R.raw.milk).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.milk)
+                sounds = MediaPlayer.create(this, R.raw.milk)
+                playlist.add(R.raw.milk)
+
             }
             else -> {
-                MediaPlayer.create(this, R.raw.doctor)
+                sounds = MediaPlayer.create(this, R.raw.doctor)
+                playlist.add(R.raw.doctor)
+
             }
         }
         sounds.start()
