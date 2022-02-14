@@ -8,56 +8,64 @@
     tools:context=".PeopleActivity">
 
     <Button
-        android:id="@+id/btnDoctor"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/Doctor"
-        app:layout_constraintEnd_toStartOf="@+id/btnFriend"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMom" />
-
-    <Button
-        android:id="@+id/btnTeacher"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="@string/Teacher"
-        app:layout_constraintBottom_toTopOf="@+id/btnFriend"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDad"
-        app:layout_constraintTop_toTopOf="@+id/btnDad"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/btnDad"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/father"
         android:text="@string/Dad"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMom"
-        app:layout_constraintEnd_toStartOf="@+id/btnFriend"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence4"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/btnFriend"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
-        android:text="@string/Friend"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
+        app:layout_constraintEnd_toStartOf="@+id/btnTeacher"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/btnMom"
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence4" />
 
     <Button
         android:id="@+id/btnMom"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/mother"
         android:text="@string/Mom"
-        app:layout_constraintEnd_toStartOf="@+id/btnDad"
+        app:layout_constraintBottom_toTopOf="@+id/btnDoctor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentence4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence4"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/btnDoctor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:text="@string/Doctor"
+        app:layout_constraintEnd_toStartOf="@+id/btnFriend"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
+
+    <Button
+        android:id="@+id/btnTeacher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/Teacher"
+        app:layout_constraintBottom_toTopOf="@+id/btnFriend"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnFriend"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="#000000"
+        android:text="@string/Friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
 
     <TextView
         android:id="@+id/txtSentence4"
