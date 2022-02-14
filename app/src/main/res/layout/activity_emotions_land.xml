@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
 
     <Button
-        android:id="@+id/milk2"
+        android:id="@+id/btnSad"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
