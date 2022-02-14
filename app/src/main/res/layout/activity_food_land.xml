@@ -5,13 +5,26 @@
     android:id="@+id/Constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#000000"
     android:background="#000000"
     tools:context=".FoodActivity">
+
+    <Button
+        android:id="@+id/btnGo3"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#2AD324"
+        android:text="@string/Go"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtSentence"
         android:layout_width="0dp"
-        android:layout_height="41dp"
+        android:layout_height="62dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -23,8 +36,8 @@
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="71dp"
-        android:layout_height="48dp"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FF7B23"
         android:onClick="delete"
@@ -32,13 +45,13 @@
         android:paddingRight="5dp"
         android:text="@string/Delete"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSentence"
-        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGo3" />
 
     <Button
         android:id="@+id/btnClear"
-        android:layout_width="72dp"
-        android:layout_height="48dp"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FD0000"
         android:onClick="clear"
@@ -46,8 +59,8 @@
         android:paddingRight="5dp"
         android:text="@string/Clear"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
     <Button
         android:id="@+id/btnPizza"
@@ -96,6 +109,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
+        android:foreground="@drawable/cake__1__removebg_preview"
         android:onClick="btnClick"
         android:tag="cake"
         app:layout_constraintStart_toEndOf="@+id/btnChips"
@@ -121,13 +135,13 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/apple"
         android:onClick="btnClick"
         android:tag="apple"
-        app:layout_constraintStart_toEndOf="@+id/btnCake"
-        app:layout_constraintTop_toBottomOf="@+id/btnDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPizza"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
