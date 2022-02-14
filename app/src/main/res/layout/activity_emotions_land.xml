@@ -14,22 +14,20 @@
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="27dp"
         android:onClick="btnClick"
         android:text="@string/Pasta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
+        tools:layout_editor_absoluteY="91dp" />
 
     <Button
         android:id="@+id/milk2"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
         android:layout_marginEnd="172dp"
         android:onClick="btnClick"
         android:text="@string/Milk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
+        tools:layout_editor_absoluteY="91dp" />
 
     <Button
         android:id="@+id/btnDelete2"
@@ -61,19 +59,6 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtSentenceEmotions"
-        android:layout_width="210dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
