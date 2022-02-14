@@ -49,8 +49,8 @@ class EmotionsActivity : AppCompatActivity() {
                     MediaPlayer.create(this, R.raw.happy)
                 }
                 btnTag.equals("angry") -> {
-                    MediaPlayer.create(this, R.raw.angry).setVolume(1.0f, 1.0f)
-                    MediaPlayer.create(this, R.raw.angry)
+                    MediaPlayer.create(this, R.raw.teacher).setVolume(1.0f, 1.0f)
+                    MediaPlayer.create(this, R.raw.teacher)
                 }
                 else -> {
                     MediaPlayer.create(this, R.raw.scared).setVolume(1.0f,1.0f)
