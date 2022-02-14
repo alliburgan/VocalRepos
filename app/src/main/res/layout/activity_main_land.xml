@@ -8,37 +8,11 @@
     android:backgroundTint="#000000"
     android:foregroundGravity="fill_horizontal"
     tools:context=".MainActivity"
-    tools:ignore="MissingDefaultResource">
-
-    <Button
-        android:id="@+id/btnPeople2"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#000000"
-        android:foreground="@drawable/untitled_artwork_1_removebg_preview__2_"
-        android:includeFontPadding="false"
-        android:onClick="openPeopleKeyboard"
-        android:text="People"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnEmotions"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
-
-    <Button
-        android:id="@+id/btnVerbs2"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#000000"
-        android:foreground="@drawable/img_0867_removebg_preview__2_"
-        android:includeFontPadding="false"
-        android:onClick="openVerbsKeyboard"
-        android:text="Verbs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPeople2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
+    tools:ignore="MissingDefaultResource"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android
+http://schemas.android.com/apk/res-auto
+http://schemas.android.com/tools ">
 
     <TextView
         android:id="@+id/txtSentenceFood"
@@ -46,8 +20,10 @@
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/btnGo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,33 +65,63 @@
         app:layout_constraintVertical_bias="0.314" />
 
     <Button
+        android:id="@+id/btnVerbs2"
+        android:layout_width="120dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/new_new_verb_folder_removebg_preview__2_"
+        android:includeFontPadding="false"
+        android:onClick="openVerbsKeyboard"
+        android:text="@string/Verbs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPeople2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/btnPeople2"
+        android:layout_width="120dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/untitled_artwork_1_removebg_preview__2_"
+        android:includeFontPadding="false"
+        android:onClick="openPeopleKeyboard"
+        android:text="@string/People"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEmotions"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
         android:id="@+id/btnFood"
         android:layout_width="120dp"
-        android:layout_height="80dp"
+        android:layout_height="84dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="160dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/littlefoodfolder"
         android:includeFontPadding="false"
         android:onClick="openFoodKeyboard"
         android:text="@string/Food"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEmotions"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
 
     <Button
         android:id="@+id/btnEmotions"
         android:layout_width="120dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="160dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/emotions"
         android:onClick="openEmotionsKeyboard"
         android:text="@string/Emotions"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnFood" />
+        app:layout_constraintStart_toEndOf="@+id/btnFood"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
