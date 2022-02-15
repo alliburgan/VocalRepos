@@ -18,7 +18,6 @@
         android:includeFontPadding="false"
         android:onClick="openQuestionsKeyboard"
         android:text="@string/Questions"
-        app:layout_constraintStart_toBottomOf="@+id/btnPeople"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
 
@@ -97,14 +96,15 @@
         android:text="@string/Food"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGo" />
-
     <Button
         android:id="@+id/btnEmotions"
         android:layout_width="130dp"
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/emotions"
+        android:includeFontPadding="false"
         android:onClick="openEmotionsKeyboard"
         android:text="@string/Emotions"
         app:layout_constraintStart_toEndOf="@+id/btnFood"

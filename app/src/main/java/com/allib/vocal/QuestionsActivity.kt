@@ -40,16 +40,45 @@ class QuestionsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
+        /*
+        val sounds = when {
+            btnTag.equals("who") -> {
+                MediaPlayer.create(this, R.raw.who).setVolume(100.0f,100.0f)
+                MediaPlayer.create(this, R.raw.who)
+            }
+            btnTag.equals("what") -> {
+                MediaPlayer.create(this, R.raw.what).setVolume(1.5f,1.5f)
+                MediaPlayer.create(this, R.raw.what)
+            }
+            btnTag.equals("when") -> {
+                MediaPlayer.create(this, R.raw.when).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.when)
+            }
+            btnTag.equals("where") -> {
+                MediaPlayer.create(this, R.raw.where).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.where)
+            }
+            btnTag.equals("why") -> {
+                MediaPlayer.create(this, R.raw.why).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.why)
+            }
+            else -> {
+                MediaPlayer.create(this, R.raw.how).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.how)
+            }
+        }
+        sounds.start()
+    */
     }
 
 
-    fun clear(view: View){
+    fun clear(@Suppress("UNUSED_PARAMETER")view: View){
         //clears words//
         words.clear()
         //runs makeSentence method//
         makeSentence()
     }
-    fun delete(view: View) {
+    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
         //removes the last word in words and runs makeSentence method//
         words.removeAt(words.size-1)
         makeSentence()
