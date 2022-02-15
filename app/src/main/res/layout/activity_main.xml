@@ -18,7 +18,6 @@
         android:includeFontPadding="false"
         android:onClick="openQuestionsKeyboard"
         android:text="@string/Questions"
-        android:textColor="#37474F"
         app:layout_constraintStart_toBottomOf="@+id/btnPeople"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
