@@ -4,7 +4,6 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 
 class EmotionsActivity : AppCompatActivity() {
@@ -23,38 +22,33 @@ class EmotionsActivity : AppCompatActivity() {
             // run the makeSentence method
             makeSentence()
 
-            // first attempt at using audio files
-            //var sounds = MediaPlayer.create(this, R.raw.friend)
+            val sounds: MediaPlayer?
 
-            // volume glitch?
-            //volumeControlStream = AudioManager.STREAM_MUSIC
-
-
-            val sounds = when {
-                btnTag.equals("sad") -> {
-                    MediaPlayer.create(this, R.raw.sad).setVolume(100.0f,100.0f)
-                    MediaPlayer.create(this, R.raw.sad)
+            when {
+            btnTag.equals("sad") -> {
+                sounds = MediaPlayer.create(this, R.raw.sad)
+                playlist.add(R.raw.sad)
                 }
                 /*
                 btnTag.equals("mad") -> {
-                    MediaPlayer.create(this, R.raw.mad).setVolume(1.5f,1.5f)
-                    MediaPlayer.create(this, R.raw.mad)
+                    sounds = MediaPlayer.create(this, R.raw.mad)
+                playlist.add(R.raw.)
                 } */
                 btnTag.equals("excited") -> {
-                    MediaPlayer.create(this, R.raw.excited).setVolume(1.0f,1.0f)
-                    MediaPlayer.create(this, R.raw.excited)
+                    sounds = MediaPlayer.create(this, R.raw.excited)
+                    playlist.add(R.raw.excited)
                 }
                 btnTag.equals("happy") -> {
-                    MediaPlayer.create(this, R.raw.happy).setVolume(1.0f,1.0f)
-                    MediaPlayer.create(this, R.raw.happy)
+                    sounds = MediaPlayer.create(this, R.raw.happy)
+                    playlist.add(R.raw.happy)
                 }
                 btnTag.equals("angry") -> {
-                    MediaPlayer.create(this, R.raw.teacher).setVolume(1.0f, 1.0f)
-                    MediaPlayer.create(this, R.raw.teacher)
+                    sounds = MediaPlayer.create(this, R.raw.teacher)
+                    playlist.add(R.raw.teacher)
                 }
                 else -> {
-                    MediaPlayer.create(this, R.raw.scared).setVolume(1.0f,1.0f)
-                    MediaPlayer.create(this, R.raw.scared)
+                    sounds = MediaPlayer.create(this, R.raw.scared)
+                    playlist.add(R.raw.scared)
                 }
             }
             sounds.start()
@@ -72,14 +66,13 @@ class EmotionsActivity : AppCompatActivity() {
             }
         }
 
-
-        fun clear(view: View){
+        fun clear(@Suppress("UNUSED_PARAMETER")view: View){
             //clears words//
             words.clear()
             //runs makeSentence method//
             makeSentence()
         }
-        fun delete(view: View) {
+        fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
             //removes the last word in words and runs makeSentence method//
             words.removeAt(words.size-1)
             makeSentence()
