@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
     <Button
-        android:id="@+id/btnPizza"
+        android:id="@+id/btnFamily"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -77,7 +77,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnMilk"
+        android:id="@+id/btnMother"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -85,12 +85,12 @@
         android:foreground="@drawable/milk"
         android:onClick="btnClick"
         android:tag="milk"
-        app:layout_constraintBottom_toBottomOf="@+id/btnPizza"
-        app:layout_constraintStart_toEndOf="@+id/btnPizza"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFamily"
+        app:layout_constraintStart_toEndOf="@+id/btnFamily"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnPasta"
+        android:id="@+id/btnSister"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -98,12 +98,12 @@
         android:foreground="@drawable/pasta"
         android:onClick="btnClick"
         android:tag="pasta"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMilk"
-        app:layout_constraintStart_toEndOf="@+id/btnMilk"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMother"
+        app:layout_constraintStart_toEndOf="@+id/btnMother"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnCake"
+        android:id="@+id/btnBrother"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -112,12 +112,12 @@
         android:foreground="@drawable/cake__1__removebg_preview"
         android:onClick="btnClick"
         android:tag="cake"
-        app:layout_constraintStart_toEndOf="@+id/btnChips"
+        app:layout_constraintStart_toEndOf="@+id/btnFather"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnChips"
+        android:id="@+id/btnFather"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -126,12 +126,12 @@
         android:foreground="@drawable/chips"
         android:onClick="btnClick"
         android:tag="chips"
-        app:layout_constraintStart_toEndOf="@+id/btnPasta"
+        app:layout_constraintStart_toEndOf="@+id/btnSister"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnApple"
+        android:id="@+id/btnDoctor"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -141,7 +141,7 @@
         android:onClick="btnClick"
         android:tag="apple"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPizza"
+        app:layout_constraintTop_toBottomOf="@+id/btnFamily"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
