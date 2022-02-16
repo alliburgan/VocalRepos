@@ -9,7 +9,7 @@ import android.widget.TextView
 class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_questions)
+        setContentView(R.layout.activity_questions_land)
         makeSentence()
         }
 
