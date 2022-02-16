@@ -9,8 +9,7 @@ import android.widget.TextView
 class EmotionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_emotions)
-
+        setContentView(R.layout.activity_emotions_land)
     makeSentence()
 
     }

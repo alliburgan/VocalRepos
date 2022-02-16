@@ -9,7 +9,7 @@ import android.widget.TextView
 class VerbsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_verbs)
+        setContentView(R.layout.activity_verbs_land)
     }
     fun btnClick(view: View) {
         // find which button it is
