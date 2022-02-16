@@ -8,7 +8,7 @@
     tools:context=".PeopleActivity">
 
     <Button
-        android:id="@+id/btnDad"
+        android:id="@+id/btnFather"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
@@ -17,11 +17,11 @@
         android:text="@string/Dad"
         app:layout_constraintEnd_toStartOf="@+id/btnTeacher"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toEndOf="@+id/btnMom"
+        app:layout_constraintStart_toEndOf="@+id/btnMother"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence4" />
 
     <Button
-        android:id="@+id/btnMom"
+        android:id="@+id/btnMother"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnFriend"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFather" />
 
     <Button
         android:id="@+id/btnTeacher"
@@ -65,7 +65,7 @@
         android:backgroundTint="#000000"
         android:text="@string/Friend"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDad" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFather" />
 
     <TextView
         android:id="@+id/txtSentence4"

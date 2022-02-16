@@ -18,6 +18,8 @@
     <string name="Angry">angry</string>
     <string name="Scared">scared</string>
     <string name="Mom">mom</string>
+    <string name="Sister">sister</string>
+    <string name="Brother">brother</string>
     <string name="Dad">dad</string>
     <string name="Teacher">teacher</string>
     <string name="Doctor">doctor</string>
