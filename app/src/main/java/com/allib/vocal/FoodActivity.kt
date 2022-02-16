@@ -16,7 +16,6 @@ class FoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
     makeSentence()
-
     }
 
     fun btnClick(view: View) {
