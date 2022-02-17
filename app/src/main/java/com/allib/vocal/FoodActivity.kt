@@ -14,9 +14,8 @@ var sentence = ""
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_food)
+        setContentView(R.layout.activity_food_land)
     makeSentence()
-
     }
 
     fun btnClick(view: View) {
@@ -34,7 +33,8 @@ class FoodActivity : AppCompatActivity() {
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
 
-        var sounds: MediaPlayer? = null
+        val sounds: MediaPlayer?
+
         when {
             btnTag.equals("pizza") -> {
                MediaPlayer.create(this, R.raw.pizza).setVolume(100.0f,100.0f)
@@ -81,13 +81,13 @@ class FoodActivity : AppCompatActivity() {
     }
 
 
-    fun clear(view: View){
+    fun clear(@Suppress("UNUSED_PARAMETER")view: View){
         //clears words//
         words.clear()
         //runs makeSentence method//
         makeSentence()
     }
-    fun delete(view: View) {
+    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
         //removes the last word in words and runs makeSentence method//
         words.removeAt(words.size-1)
         makeSentence()
