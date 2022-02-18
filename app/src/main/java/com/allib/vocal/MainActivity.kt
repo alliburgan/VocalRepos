@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-private var mediaPlayer: MediaPlayer? = null
 val playlist = ArrayList<Int>()
 var position = 0
 
@@ -18,52 +17,49 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_land)
 
-
         makeSentence()
     }
 
 
-    fun openFoodKeyboard(view: View) {
+    fun openFoodKeyboard(@Suppress("UNUSED_PARAMETER")view: View) {
         val intent = Intent(this, FoodActivity::class.java)
         startActivity(intent)
     }
 
-    fun openEmotionsKeyboard(view: View) {
+    fun openEmotionsKeyboard(@Suppress("UNUSED_PARAMETER")view: View) {
         val intent = Intent(this, EmotionsActivity::class.java)
         startActivity(intent)
     }
 
-    fun openPeopleKeyboard(view: View) {
+    fun openPeopleKeyboard(@Suppress("UNUSED_PARAMETER")view: View) {
         val intent = Intent(this, PeopleActivity::class.java)
         startActivity(intent)
     }
 
-    fun openVerbsKeyboard(view: View) {
+    fun openVerbsKeyboard(@Suppress("UNUSED_PARAMETER")view: View) {
         val intent = Intent(this, VerbsActivity::class.java)
         startActivity(intent)
     }
 
-    fun openQuestionsKeyboard(view: View) {
+    fun openQuestionsKeyboard(@Suppress("UNUSED_PARAMETER")view: View) {
         val intent = Intent(this, QuestionsActivity::class.java)
         startActivity(intent)
     }
 
     fun go(view: View) {
+        val testPlaylist = MediaPlayer.create(this, playlist[position])
 
-
-        var testPlaylist = MediaPlayer.create(this, playlist[position])
         testPlaylist.start()
         //testPlaylist = MediaPlayer.create(this,playlist[1])
         //testPlaylist.start()
 
             testPlaylist?.setOnCompletionListener(OnCompletionListener
             {
-                next(position, view)
+                next(view)
             })
-
     }
 
-    fun next(num: Int, view: View)    {
+    fun next(view: View)    {
         position++
 
         if(playlist.size>position)
@@ -72,7 +68,6 @@ class MainActivity : AppCompatActivity() {
             position = 0
 
     }
-
 
     private fun makeSentence() {
         //sets to empty string//
@@ -84,6 +79,18 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
+    }
+
+    fun clear(@Suppress("UNUSED_PARAMETER")view: View){
+        //clears words//
+        words.clear()
+        //runs makeSentence method//
+        makeSentence()
+    }
+    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
+        //removes the last word in words and runs makeSentence method//
+        words.removeAt(words.size-1)
+        makeSentence()
     }
 }
 

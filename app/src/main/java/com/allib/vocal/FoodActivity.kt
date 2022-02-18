@@ -79,8 +79,6 @@ class FoodActivity : AppCompatActivity() {
             text = sentence
         }
     }
-
-
     fun clear(@Suppress("UNUSED_PARAMETER")view: View){
         //clears words//
         words.clear()
@@ -93,3 +91,4 @@ class FoodActivity : AppCompatActivity() {
         makeSentence()
     }
 }
+

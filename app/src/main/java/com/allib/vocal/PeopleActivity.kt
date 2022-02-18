@@ -29,11 +29,9 @@ class PeopleActivity : AppCompatActivity() {
 
         val sounds = when {
             btnTag.equals("mom") -> {
-                MediaPlayer.create(this, R.raw.mom).setVolume(100.0f,100.0f)
                 MediaPlayer.create(this, R.raw.mom)
             }
             btnTag.equals("dad") -> {
-                MediaPlayer.create(this, R.raw.dad).setVolume(1.5f,1.5f)
                 MediaPlayer.create(this, R.raw.dad)
             }
             btnTag.equals("teacher") -> {
@@ -46,8 +44,7 @@ class PeopleActivity : AppCompatActivity() {
 
             }
             else -> {
-                MediaPlayer.create(this, R.raw.friend).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.friend)
+                MediaPlayer.create(this, R.raw.angry)
             }
         }
         sounds.start()
