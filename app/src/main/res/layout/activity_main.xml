@@ -8,8 +8,35 @@
     android:backgroundTint="#000000"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnQuestions"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#36C6B9"
+        android:includeFontPadding="false"
+        android:onClick="openQuestionsKeyboard"
+        android:text="@string/Questions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
+
+    <Button
+        android:id="@+id/btnPeople"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/black"
+        android:foreground="@drawable/untitled_artwork_1_removebg_preview__2_"
+        android:includeFontPadding="false"
+        android:onClick="openPeopleKeyboard"
+        android:text="@string/People"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFood" />
+
     <TextView
-        android:id="@+id/txtSentenceFood"
+        android:id="@+id/txtSentence"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
@@ -28,10 +55,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#2AD324"
+        android:onClick="go"
         android:text="@string/Go"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceFood" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
         android:id="@+id/btnDelete"
@@ -57,8 +85,8 @@
 
     <Button
         android:id="@+id/btnFood"
-        android:layout_width="115dp"
-        android:layout_height="56dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
@@ -68,18 +96,30 @@
         android:text="@string/Food"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGo" />
-
     <Button
         android:id="@+id/btnEmotions"
-        android:layout_width="119dp"
-        android:layout_height="56dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/emotions"
+        android:includeFontPadding="false"
         android:onClick="openEmotionsKeyboard"
         android:text="@string/Emotions"
         app:layout_constraintStart_toEndOf="@+id/btnFood"
         app:layout_constraintTop_toTopOf="@+id/btnFood" />
 
-
+    <Button
+        android:id="@+id/btnVerbs"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/black"
+        android:includeFontPadding="false"
+        android:onClick="openVerbsKeyboard"
+        android:text="@string/Verbs"
+        app:layout_constraintStart_toEndOf="@+id/btnPeople"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmotions" />
 </androidx.constraintlayout.widget.ConstraintLayout>

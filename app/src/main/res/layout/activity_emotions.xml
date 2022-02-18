@@ -2,75 +2,122 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".EmotionsActivity">
 
+    <TextView
+        android:id="@+id/txtSentence"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:id="@+id/pasta2"
+        android:id="@+id/btnDelete"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FF7B23"
+        android:onClick="delete"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Delete"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSentence"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FD0000"
+        android:onClick="clear"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/Clear"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnScared"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Scared"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/btnAngry"
+        app:layout_constraintTop_toBottomOf="@+id/btnMad" />
+
+    <Button
+        android:id="@+id/btnAngry"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Angry"
+        app:layout_constraintStart_toEndOf="@+id/btnExcited"
+        app:layout_constraintTop_toBottomOf="@+id/btnSad" />
+
+    <Button
+        android:id="@+id/btnExcited"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnClick"
+        android:text="@string/Excited"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHappy" />
+
+    <Button
+        android:id="@+id/btnMad"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="@string/Mad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSad"
+        app:layout_constraintTop_toTopOf="@+id/btnSad" />
+
+    <Button
+        android:id="@+id/btnHappy"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:onClick="btnClick"
-        android:text="@string/Pasta"
+        android:tag="happy"
+        android:text="@string/Happy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
-        android:id="@+id/milk2"
+        android:id="@+id/btnSad"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="172dp"
         android:onClick="btnClick"
-        android:text="@string/Milk"
+        android:text="@string/Sad"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSentenceEmotions" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
-    <Button
-        android:id="@+id/btnDelete2"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="665dp"
-        android:onClick="delete"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="@string/Delete"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnClear2"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnClear2"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="665dp"
-        android:onClick="clear"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="@string/Clear"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtSentenceEmotions"
-        android:layout_width="210dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

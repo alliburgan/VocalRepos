@@ -1,22 +1,17 @@
 package com.allib.vocal
 
 import android.media.MediaPlayer
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 
-var words = arrayListOf<String>()
-var sentence = ""
-
-
-
-class FoodActivity : AppCompatActivity() {
+class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_food_land)
-    makeSentence()
-    }
+        setContentView(R.layout.activity_questions_land)
+        makeSentence()
+        }
 
     fun btnClick(view: View) {
         // find which button it is
@@ -33,39 +28,6 @@ class FoodActivity : AppCompatActivity() {
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
 
-        val sounds: MediaPlayer?
-
-        when {
-            btnTag.equals("pizza") -> {
-               MediaPlayer.create(this, R.raw.pizza).setVolume(100.0f,100.0f)
-                sounds = MediaPlayer.create(this, R.raw.pizza)
-                playlist.add(R.raw.pizza)
-            }
-            btnTag.equals("chips") -> {
-                MediaPlayer.create(this, R.raw.chips).setVolume(1.5f,1.5f)
-                sounds = MediaPlayer.create(this, R.raw.chips)
-                playlist.add(R.raw.chips)
-
-            }
-            btnTag.equals("pasta") -> {
-                MediaPlayer.create(this, R.raw.pasta).setVolume(1.0f,1.0f)
-                sounds = MediaPlayer.create(this, R.raw.pasta)
-                playlist.add(R.raw.pasta)
-
-            }
-            btnTag.equals("milk") -> {
-                MediaPlayer.create(this, R.raw.milk).setVolume(1.0f,1.0f)
-                sounds = MediaPlayer.create(this, R.raw.milk)
-                playlist.add(R.raw.milk)
-
-            }
-            else -> {
-                sounds = MediaPlayer.create(this, R.raw.doctor)
-                playlist.add(R.raw.doctor)
-
-            }
-        }
-        sounds.start()
     }
 
     private fun makeSentence() {
@@ -78,6 +40,35 @@ class FoodActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
+        /*
+        val sounds = when {
+            btnTag.equals("who") -> {
+                MediaPlayer.create(this, R.raw.who).setVolume(100.0f,100.0f)
+                MediaPlayer.create(this, R.raw.who)
+            }
+            btnTag.equals("what") -> {
+                MediaPlayer.create(this, R.raw.what).setVolume(1.5f,1.5f)
+                MediaPlayer.create(this, R.raw.what)
+            }
+            btnTag.equals("when") -> {
+                MediaPlayer.create(this, R.raw.when).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.when)
+            }
+            btnTag.equals("where") -> {
+                MediaPlayer.create(this, R.raw.where).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.where)
+            }
+            btnTag.equals("why") -> {
+                MediaPlayer.create(this, R.raw.why).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.why)
+            }
+            else -> {
+                MediaPlayer.create(this, R.raw.how).setVolume(1.0f,1.0f)
+                MediaPlayer.create(this, R.raw.how)
+            }
+        }
+        sounds.start()
+    */
     }
 
 
