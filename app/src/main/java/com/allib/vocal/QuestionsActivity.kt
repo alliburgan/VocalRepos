@@ -41,30 +41,31 @@ class QuestionsActivity : AppCompatActivity() {
             text = sentence
         }
         /*
-        val sounds = when {
+        val sounds: MediaPlayer?
+        when {
             btnTag.equals("who") -> {
-                MediaPlayer.create(this, R.raw.who).setVolume(100.0f,100.0f)
-                MediaPlayer.create(this, R.raw.who)
+                sounds = MediaPlayer.create(this, R.raw.who)
+                playlist.add(R.raw.who)
             }
             btnTag.equals("what") -> {
-                MediaPlayer.create(this, R.raw.what).setVolume(1.5f,1.5f)
-                MediaPlayer.create(this, R.raw.what)
+                sounds = MediaPlayer.create(this, R.raw.what)
+                playlist.add(R.raw.what)
             }
             btnTag.equals("when") -> {
-                MediaPlayer.create(this, R.raw.when).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.when)
+                sounds = MediaPlayer.create(this, R.raw.when)
+                playlist.add(R.raw.when)
             }
             btnTag.equals("where") -> {
-                MediaPlayer.create(this, R.raw.where).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.where)
+                sounds = MediaPlayer.create(this, R.raw.where)
+                playlist.add(R.raw.where)
             }
             btnTag.equals("why") -> {
-                MediaPlayer.create(this, R.raw.why).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.why)
+                sounds = MediaPlayer.create(this, R.raw.why)
+                playlist.add(R.raw.why)
             }
             else -> {
-                MediaPlayer.create(this, R.raw.how).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.how)
+                sounds = MediaPlayer.create(this, R.raw.how)
+                playlist.add(R.raw.how)
             }
         }
         sounds.start()

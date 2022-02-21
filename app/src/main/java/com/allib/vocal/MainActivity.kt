@@ -65,8 +65,7 @@ class MainActivity : AppCompatActivity() {
         if(playlist.size>position)
             go(view)
         else
-            position = 0
-
+            position=0
     }
 
     private fun makeSentence() {
@@ -86,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         words.clear()
         //runs makeSentence method//
         makeSentence()
+        playlist.clear()
     }
     fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
         //removes the last word in words and runs makeSentence method//

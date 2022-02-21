@@ -26,34 +26,35 @@ class VerbsActivity : AppCompatActivity() {
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
 /*
-        val sounds = when {
+        val sounds: MediaPlayer?
+        when {
             btnTag.equals("is") -> {
-                MediaPlayer.create(this, R.raw.is).setVolume(100.0f,100.0f)
-                MediaPlayer.create(this, R.raw.is)
+                sounds = MediaPlayer.create(this, R.raw.is)
+                playlist.add(R.raw.is)
             }
             btnTag.equals("do") -> {
-                MediaPlayer.create(this, R.raw.do).setVolume(1.5f,1.5f)
-                MediaPlayer.create(this, R.raw.do)
+                sounds = MediaPlayer.create(this, R.raw.do)
+                playlist.add(R.raw.do)
             }
             btnTag.equals("need") -> {
-                MediaPlayer.create(this, R.raw.need).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.need)
+                sounds = MediaPlayer.create(this, R.raw.need)
+                playlist.add(R.raw.need)
             }
             btnTag.equals("have") -> {
-                MediaPlayer.create(this, R.raw.have).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.have)
+                sounds = MediaPlayer.create(this, R.raw.have)
+                playlist.add(R.raw.have)
             }
             btnTag.equals("want") -> {
-                MediaPlayer.create(this, R.raw.want).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.want)
-                }
+                sounds = MediaPlayer.create(this, R.raw.want)
+                playlist.add(R.raw.want)
+            }
             btnTag.equals("come") -> {
-                MediaPlayer.create(this, R.raw.come).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.come)
+                sounds = MediaPlayer.create(this, R.raw.come)
+                playlist.add(R.raw.come)
             }
             else -> {
-                MediaPlayer.create(this, R.raw.get).setVolume(1.0f,1.0f)
                 MediaPlayer.create(this, R.raw.get)
+                playlist.add(R.raw.get)
             }
         }
         sounds.start()

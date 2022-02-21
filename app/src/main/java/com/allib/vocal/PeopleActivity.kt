@@ -27,26 +27,31 @@ class PeopleActivity : AppCompatActivity() {
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
 
-        val sounds = when {
+        val sounds: MediaPlayer?
+
+        when {
             btnTag.equals("mom") -> {
-                MediaPlayer.create(this, R.raw.mom)
+                sounds = MediaPlayer.create(this, R.raw.mom)
+                playlist.add(R.raw.mom)
             }
             btnTag.equals("dad") -> {
-                MediaPlayer.create(this, R.raw.dad)
+                sounds = MediaPlayer.create(this, R.raw.dad)
+                playlist.add(R.raw.dad)
             }
             btnTag.equals("teacher") -> {
-                MediaPlayer.create(this, R.raw.teacher).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.teacher)
+                sounds = MediaPlayer.create(this, R.raw.teacher)
+                playlist.add(R.raw.teacher)
             }
             btnTag.equals("doctor") -> {
-                MediaPlayer.create(this, R.raw.doctor).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.doctor)
-
+                sounds = MediaPlayer.create(this, R.raw.doctor)
+                playlist.add(R.raw.doctor)
             }
             else -> {
-                MediaPlayer.create(this, R.raw.angry)
+                sounds = MediaPlayer.create(this, R.raw.angry)
+                playlist.add(R.raw.excited)
             }
-        }
+        }//Still needs brother and sister
+
         sounds.start()
     }
 
