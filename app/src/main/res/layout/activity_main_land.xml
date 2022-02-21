@@ -123,5 +123,32 @@ http://schemas.android.com/tools ">
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.348" />
 
+    <Button
+        android:id="@+id/btnPronouns"
+        android:layout_width="120dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/img_0866_removebg_preview"
+        android:text="@string/Pronouns"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFood" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/questions_removebg_preview"
+        android:text="@string/Questions"
+        android:textColor="#FBE9E7"
+        app:layout_constraintStart_toEndOf="@+id/btnPronouns"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmotions" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
