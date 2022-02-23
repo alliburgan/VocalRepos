@@ -27,6 +27,34 @@ class QuestionsActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
+        val sounds: MediaPlayer?
+        when {
+            btnTag.equals("who") -> {
+                sounds = MediaPlayer.create(this, R.raw.who)
+                playlist.add(R.raw.who)
+            }
+            btnTag.equals("what") -> {
+                sounds = MediaPlayer.create(this, R.raw.what)
+                playlist.add(R.raw.what)
+            }
+            btnTag.equals("when") -> {
+                sounds = MediaPlayer.create(this, R.raw.angry)
+                playlist.add(R.raw.angry)
+            }
+            btnTag.equals("where") -> {
+                sounds = MediaPlayer.create(this, R.raw.where)
+                playlist.add(R.raw.where)
+            }
+            btnTag.equals("why") -> {
+                sounds = MediaPlayer.create(this, R.raw.why)
+                playlist.add(R.raw.why)
+            }
+            else -> {
+                sounds = MediaPlayer.create(this, R.raw.how)
+                playlist.add(R.raw.how)
+            }
+        }
+        sounds?.start()
 
     }
 
@@ -40,35 +68,8 @@ class QuestionsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
-        /*
-        val sounds = when {
-            btnTag.equals("who") -> {
-                MediaPlayer.create(this, R.raw.who).setVolume(100.0f,100.0f)
-                MediaPlayer.create(this, R.raw.who)
-            }
-            btnTag.equals("what") -> {
-                MediaPlayer.create(this, R.raw.what).setVolume(1.5f,1.5f)
-                MediaPlayer.create(this, R.raw.what)
-            }
-            btnTag.equals("when") -> {
-                MediaPlayer.create(this, R.raw.when).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.when)
-            }
-            btnTag.equals("where") -> {
-                MediaPlayer.create(this, R.raw.where).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.where)
-            }
-            btnTag.equals("why") -> {
-                MediaPlayer.create(this, R.raw.why).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.why)
-            }
-            else -> {
-                MediaPlayer.create(this, R.raw.how).setVolume(1.0f,1.0f)
-                MediaPlayer.create(this, R.raw.how)
-            }
-        }
-        sounds.start()
-    */
+
+
     }
 
 

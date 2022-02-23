@@ -71,7 +71,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="is"
-        android:text="is"
+        android:text="@string/Is"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -84,7 +84,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="do"
-        android:text="do"
+        android:text="@string/Do"
         app:layout_constraintBottom_toBottomOf="@+id/btnIs"
         app:layout_constraintStart_toEndOf="@+id/btnIs"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -97,7 +97,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="need"
-        android:text="need"
+        android:text="@string/Need"
         app:layout_constraintBottom_toBottomOf="@+id/btnDo"
         app:layout_constraintStart_toEndOf="@+id/btnDo"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -112,7 +112,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="have"
-        android:text="have"
+        android:text="@string/Have"
         app:layout_constraintStart_toEndOf="@+id/btnNeed"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -126,7 +126,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="want"
-        android:text="want"
+        android:text="@string/Want"
         app:layout_constraintStart_toEndOf="@+id/btnHave"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -140,7 +140,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="come"
-        android:text="come"
+        android:text="@string/Come"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIs"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -153,7 +153,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="get"
-        android:text="get"
+        android:text="@string/Get"
         app:layout_constraintBottom_toBottomOf="@+id/btnCome"
         app:layout_constraintStart_toEndOf="@+id/btnIs"
         tools:ignore="SpeakableTextPresentCheck" />
