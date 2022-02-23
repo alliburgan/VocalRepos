@@ -27,20 +27,6 @@ class QuestionsActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
-
-    }
-
-    private fun makeSentence() {
-        //sets to empty string//
-        sentence = ""
-        //adds each word in array list to the sentence//
-        for (i in words.indices) {
-            sentence += words[i] + " "
-        }
-        findViewById<TextView>(R.id.txtSentence).apply {
-            text = sentence
-        }
-        /*
         val sounds: MediaPlayer?
         when {
             btnTag.equals("who") -> {
@@ -52,8 +38,8 @@ class QuestionsActivity : AppCompatActivity() {
                 playlist.add(R.raw.what)
             }
             btnTag.equals("when") -> {
-                sounds = MediaPlayer.create(this, R.raw.when)
-                playlist.add(R.raw.when)
+                sounds = MediaPlayer.create(this, R.raw.angry)
+                playlist.add(R.raw.angry)
             }
             btnTag.equals("where") -> {
                 sounds = MediaPlayer.create(this, R.raw.where)
@@ -68,8 +54,22 @@ class QuestionsActivity : AppCompatActivity() {
                 playlist.add(R.raw.how)
             }
         }
-        sounds.start()
-    */
+        sounds?.start()
+
+    }
+
+    private fun makeSentence() {
+        //sets to empty string//
+        sentence = ""
+        //adds each word in array list to the sentence//
+        for (i in words.indices) {
+            sentence += words[i] + " "
+        }
+        findViewById<TextView>(R.id.txtSentence).apply {
+            text = sentence
+        }
+
+
     }
 
 
