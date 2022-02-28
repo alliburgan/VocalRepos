@@ -1,8 +1,6 @@
 package com.allib.vocal
 
-import android.content.Intent
 import android.media.MediaPlayer
-import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -83,14 +81,15 @@ class FoodActivity : AppCompatActivity() {
     }
 
     fun go(view: View) {
-        val testPlaylist = MediaPlayer.create(this, playlist[position])
+        if(playlist.size>0) {
+            val testPlaylist = MediaPlayer.create(this, playlist[position])
 
-        testPlaylist.start()
+            testPlaylist.start()
 
-        testPlaylist?.setOnCompletionListener(OnCompletionListener
-        {
-            next(view)
-        })
+            testPlaylist?.setOnCompletionListener {
+                next(view)
+            }
+        }
     }
 
     fun next(view: View)    {
@@ -102,6 +101,12 @@ class FoodActivity : AppCompatActivity() {
             position=0
     }
 
+    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
+        //removes the last word in words and runs makeSentence method//
+        words.removeAt(words.size-1)
+        makeSentence()
+        playlist.removeAt(playlist.size-1)
+    }
     fun clear(@Suppress("UNUSED_PARAMETER")view: View){
         //clears words//
         words.clear()
@@ -109,10 +114,6 @@ class FoodActivity : AppCompatActivity() {
         makeSentence()
         playlist.clear()
     }
-    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
-        //removes the last word in words and runs makeSentence method//
-        words.removeAt(words.size-1)
-        makeSentence()
-    }
+
 }
 

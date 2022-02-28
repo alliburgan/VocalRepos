@@ -1,10 +1,11 @@
 package com.allib.vocal
 
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,20 +69,43 @@ class QuestionsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtSentence).apply {
             text = sentence
         }
+    }
 
+    fun go(view: View) {
+        if(playlist.size>0) {
+            val testPlaylist = MediaPlayer.create(this, playlist[position])
 
+            testPlaylist.start()
+            //testPlaylist = MediaPlayer.create(this,playlist[1])
+            //testPlaylist.start()
+
+            testPlaylist?.setOnCompletionListener {
+                next(view)
+            }
+        }
+    }
+
+    fun next(view: View)    {
+        position++
+
+        if(playlist.size>position)
+            go(view)
+        else
+            position=0
     }
 
 
+    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
+        //removes the last word in words and runs makeSentence method//
+        words.removeAt(words.size-1)
+        makeSentence()
+        playlist.removeAt(playlist.size-1)
+    }
     fun clear(@Suppress("UNUSED_PARAMETER")view: View){
         //clears words//
         words.clear()
         //runs makeSentence method//
         makeSentence()
-    }
-    fun delete(@Suppress("UNUSED_PARAMETER")view: View) {
-        //removes the last word in words and runs makeSentence method//
-        words.removeAt(words.size-1)
-        makeSentence()
+        playlist.clear()
     }
 }

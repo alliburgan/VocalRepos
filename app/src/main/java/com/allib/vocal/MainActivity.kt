@@ -2,7 +2,6 @@ package com.allib.vocal
 
 import android.content.Intent
 import android.media.MediaPlayer
-import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -47,16 +46,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun go(view: View) {
-        val testPlaylist = MediaPlayer.create(this, playlist[position])
+        if(playlist.size>0) {
+            val testPlaylist = MediaPlayer.create(this, playlist[position])
 
-        testPlaylist.start()
-        //testPlaylist = MediaPlayer.create(this,playlist[1])
-        //testPlaylist.start()
+            testPlaylist.start()
 
-            testPlaylist?.setOnCompletionListener(OnCompletionListener
-            {
+            testPlaylist?.setOnCompletionListener {
                 next(view)
-            })
+            }
+        }
     }
 
     fun next(view: View)    {
