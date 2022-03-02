@@ -10,6 +10,32 @@
     tools:context=".FoodActivity">
 
     <Button
+        android:id="@+id/btnGoWord"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Go"
+        android:text="@string/Go"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCome"
+        app:layout_constraintStart_toEndOf="@+id/btnGet"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="stop"
+        android:text="stop"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCome"
+        app:layout_constraintStart_toEndOf="@+id/btnGoWord"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/btnGo"
         android:layout_width="113dp"
         android:layout_height="49dp"

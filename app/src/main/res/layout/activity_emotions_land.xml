@@ -117,5 +117,106 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <Button
+        android:id="@+id/btnSleepy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/sleepy"
+        android:onClick="btnClick"
+        android:tag="Sleeps"
+        app:layout_constraintStart_toEndOf="@+id/btnScared"
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnSilly"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/silly"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHappy"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnSick"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/sick"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toEndOf="@+id/btnSilly"
+        app:layout_constraintTop_toBottomOf="@+id/btnSad"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnDisgusted"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/disgusted"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toEndOf="@+id/btnSick"
+        app:layout_constraintTop_toBottomOf="@+id/btnAngry"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnHurt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/hurt"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toEndOf="@+id/btnDisgusted"
+        app:layout_constraintTop_toBottomOf="@+id/btnScared"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnCool"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/cool"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toEndOf="@+id/btnHurt"
+        app:layout_constraintTop_toBottomOf="@+id/btnSleepy"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnConfused"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:foreground="@drawable/confused"
+        android:onClick="btnClick"
+        android:tag="@string/Scared"
+        app:layout_constraintStart_toEndOf="@+id/btnCool"
+        app:layout_constraintTop_toBottomOf="@+id/btnSleepy"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
