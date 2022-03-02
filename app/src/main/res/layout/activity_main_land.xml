@@ -107,7 +107,7 @@ http://schemas.android.com/tools ">
         android:layout_marginStart="24dp"
         android:layout_marginTop="61dp"
         android:backgroundTint="#000000"
-        android:foreground="@drawable/questions_removebg_preview"
+        android:foreground="@drawable/yellow_questions"
         android:onClick="openQuestionsKeyboard"
         android:text="@string/Questions"
         android:textColor="#FBE9E7"
