@@ -19,11 +19,12 @@ http://schemas.android.com/tools ">
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:text=""
         app:layout_constraintEnd_toStartOf="@+id/btnGo"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +32,7 @@ http://schemas.android.com/tools ">
         android:id="@+id/btnGo"
         android:layout_width="113dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#2AD324"
         android:onClick="go"
@@ -39,19 +40,6 @@ http://schemas.android.com/tools ">
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="113dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#FF7B23"
-        android:onClick="delete"
-        android:text="@string/Delete"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/btnClear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGo" />
 
     <Button
         android:id="@+id/btnClear"
@@ -65,31 +53,43 @@ http://schemas.android.com/tools ">
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
+        app:layout_constraintVertical_bias="0.378" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FF7B23"
+        android:onClick="delete"
+        android:text="@string/Delete"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGo"
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <Button
         android:id="@+id/btnFood"
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/littlefoodfolder"
         android:includeFontPadding="false"
         android:onClick="openFoodKeyboard"
         android:text="@string/Food"
-        app:layout_constraintBottom_toTopOf="@id/btnPronouns"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSentence"
-        app:layout_constraintVertical_bias="0.351" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
         android:id="@+id/btnEmotions"
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/emotions"
@@ -105,7 +105,7 @@ http://schemas.android.com/tools ">
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/yellow_questions"
         android:onClick="openQuestionsKeyboard"
@@ -119,41 +119,38 @@ http://schemas.android.com/tools ">
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/untitled_artwork_1_removebg_preview__2_"
         android:includeFontPadding="false"
         android:onClick="openPeopleKeyboard"
         android:text="@string/People"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnEmotions"
-        app:layout_constraintTop_toTopOf="@id/btnFood"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
         android:id="@+id/btnVerbs"
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#000000"
-        android:foreground="@drawable/new_new_verb_folder_removebg_preview__2_"
+        android:foreground="@drawable/best_verbs_pic"
         android:includeFontPadding="false"
         android:onClick="openVerbsKeyboard"
         android:text="@string/Verbs"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnPeople"
-        app:layout_constraintTop_toTopOf="@id/btnFood"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSentence" />
 
     <Button
         android:id="@+id/btnPronouns"
         android:layout_width="120dp"
         android:layout_height="84dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/pronouns"
         android:text="@string/Pronouns"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFood" />
 
