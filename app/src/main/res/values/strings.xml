@@ -45,6 +45,6 @@
     <string name="Password">Password</string>
     <string name="Submit">Submit</string>
     <string name="Username">Username</string>
-
-
+    <string name="Custom">Custom</string>
+    <string name="Places">Places</string>
 </resources>
