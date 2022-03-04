@@ -24,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:font="@font/sinhala_sangam_mn"
+        android:fontFamily="@font/sinhala_sangam_mn"
         android:text="@string/Login"
         android:textColor="#FFFFFF"
         android:textIsSelectable="false"
