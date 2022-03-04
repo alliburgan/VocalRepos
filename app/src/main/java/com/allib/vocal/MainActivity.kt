@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun upgradeYourAccount(@Suppress("UNUSED_PARAMETER")view: View) {
+        val intent = Intent(this, QuestionsActivity::class.java)
+        startActivity(intent)
+    }
+
     fun go(view: View) {
         if(playlist.size>0) {
             val testPlaylist = MediaPlayer.create(this, playlist[position])

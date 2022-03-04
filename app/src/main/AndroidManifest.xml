@@ -12,34 +12,39 @@
         android:theme="@style/Theme.Vocal">
         <activity
             android:name=".QuestionsActivity"
+            android:exported="false"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".VerbsActivity"
+            android:exported="false"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".PeopleActivity"
+            android:exported="false"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".UpgradeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".EmotionsActivity"
+            android:exported="false"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".FoodActivity"
+            android:exported="false"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
