@@ -43,13 +43,13 @@ class EmotionsActivity : AppCompatActivity() {
                     sounds = MediaPlayer.create(this, R.raw.happy)
                     playlist.add(R.raw.happy)
                 }
-                btnTag.equals("angry") -> {
-                    sounds = MediaPlayer.create(this, R.raw.teacher)
-                    playlist.add(R.raw.teacher)
+                btnTag.equals("scared") -> {
+                    sounds = MediaPlayer.create(this, R.raw.scared)
+                    playlist.add(R.raw.angry)
                 }
                 else -> {
-                    sounds = MediaPlayer.create(this, R.raw.scared)
-                    playlist.add(R.raw.scared)
+                    sounds = MediaPlayer.create(this, R.raw.angry)
+                    playlist.add(R.raw.angry)
                 }
             }
             sounds.start()

@@ -156,27 +156,25 @@ http://schemas.android.com/tools ">
         android:id="@+id/btnCustom"
         android:layout_width="120dp"
         android:layout_height="84dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/custom_button"
         android:text="Custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Places"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
 
     <Button
         android:id="@+id/Places"
         android:layout_width="120dp"
         android:layout_height="84dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/places_folder"
         android:onClick="upgradeYourAccount"
         android:text="Places"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnQuestions"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
 
     <ImageView
