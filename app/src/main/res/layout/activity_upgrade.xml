@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/btnPremium"
         android:layout_width="238dp"
-        android:layout_height="53dp"
+        android:layout_height="55dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="172dp"
         android:backgroundTint="#C25DBC"
@@ -70,7 +70,7 @@
     <Button
         android:id="@+id/btnPackage"
         android:layout_width="296dp"
-        android:layout_height="48dp"
+        android:layout_height="55dp"
         android:backgroundTint="#C25DA8"
         android:text="Purchase Selected Package(s)"
         app:layout_constraintEnd_toEndOf="@+id/txtPackage"
