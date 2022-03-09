@@ -18,14 +18,12 @@ http://schemas.android.com/tools ">
         android:id="@+id/txtSentence"
         android:layout_width="528dp"
         android:layout_height="65dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:text=""
         app:layout_constraintEnd_toStartOf="@+id/btnGo"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

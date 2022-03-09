@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun upgradeYourAccount(@Suppress("UNUSED_PARAMETER")view: View) {
-        val intent = Intent(this, QuestionsActivity::class.java)
+        val intent = Intent(this, UpgradeActivity::class.java)
         startActivity(intent)
     }
 

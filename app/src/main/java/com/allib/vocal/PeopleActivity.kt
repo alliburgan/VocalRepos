@@ -48,8 +48,8 @@ class PeopleActivity : AppCompatActivity() {
                 playlist.add(R.raw.doctor)
             }
             else -> {
-                sounds = MediaPlayer.create(this, R.raw.angry)
-                playlist.add(R.raw.excited)
+                sounds = MediaPlayer.create(this, R.raw.i)
+                playlist.add(R.raw.i)
             }
         }//Still needs brother and sister
 

@@ -26,41 +26,46 @@ class VerbsActivity : AppCompatActivity() {
         // volume glitch?
         //volumeControlStream = AudioManager.STREAM_MUSIC
 
-/*
+
         val sounds: MediaPlayer?
         when {
-            btnTag.equals("is") -> {
-                sounds = MediaPlayer.create(this, R.raw.is)
-                playlist.add(R.raw.is)
-            }
+            //btnTag.equals("is") -> {
+                //sounds = MediaPlayer.create(this, R.raw.is)
+                //playlist.add(R.raw.is)
+            //}
+            /*
             btnTag.equals("do") -> {
                 sounds = MediaPlayer.create(this, R.raw.do)
                 playlist.add(R.raw.do)
             }
+            */
             btnTag.equals("need") -> {
                 sounds = MediaPlayer.create(this, R.raw.need)
                 playlist.add(R.raw.need)
             }
+            /*
             btnTag.equals("have") -> {
                 sounds = MediaPlayer.create(this, R.raw.have)
                 playlist.add(R.raw.have)
             }
+            */
             btnTag.equals("want") -> {
                 sounds = MediaPlayer.create(this, R.raw.want)
                 playlist.add(R.raw.want)
             }
+            /*
             btnTag.equals("come") -> {
                 sounds = MediaPlayer.create(this, R.raw.come)
                 playlist.add(R.raw.come)
-            }
+            }*/
             else -> {
-                MediaPlayer.create(this, R.raw.get)
-                playlist.add(R.raw.get)
+                sounds = MediaPlayer.create(this, R.raw.angry)
+                playlist.add(R.raw.angry)
             }
         }
-        sounds.start()
+        sounds?.start()
 
- */
+
     }
 
     private fun makeSentence() {

@@ -164,6 +164,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#000000"
+        android:onClick="btnClick"
         android:tag="I"
         android:text="I"
         app:layout_constraintStart_toEndOf="@+id/btnTeacher"
