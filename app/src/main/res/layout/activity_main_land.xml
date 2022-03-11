@@ -23,6 +23,7 @@ http://schemas.android.com/tools ">
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:text=""
+        android:textSize="34sp"
         app:layout_constraintEnd_toStartOf="@+id/btnGo"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
