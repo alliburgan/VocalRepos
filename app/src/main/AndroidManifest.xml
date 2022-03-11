@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocal">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuestionsActivity"
             android:exported="false"
             android:screenOrientation="landscape"
