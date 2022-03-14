@@ -10,6 +10,60 @@
     tools:context=".FoodActivity">
 
     <Button
+        android:id="@+id/btnEat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Eat"
+        android:text="Eat"
+        app:layout_constraintStart_toEndOf="@+id/btnWill"
+        app:layout_constraintTop_toBottomOf="@+id/btnCome"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnWill"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Will"
+        android:text="Will"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCome"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnLike"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Like"
+        android:text="Like"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCan"
+        app:layout_constraintStart_toEndOf="@+id/btnCan"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnCan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Can"
+        android:text="Can"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCome"
+        app:layout_constraintStart_toEndOf="@+id/btnStop"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/btnGoWord"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -30,7 +84,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="stop"
-        android:text="stop"
+        android:text="@string/stop"
         app:layout_constraintBottom_toBottomOf="@+id/btnCome"
         app:layout_constraintStart_toEndOf="@+id/btnGoWord"
         tools:ignore="SpeakableTextPresentCheck" />

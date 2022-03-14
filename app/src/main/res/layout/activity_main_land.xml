@@ -160,7 +160,7 @@ http://schemas.android.com/tools ">
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/custom_button"
-        android:text="Custom"
+        android:text="@string/Custom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
 
@@ -173,7 +173,7 @@ http://schemas.android.com/tools ">
         android:backgroundTint="#000000"
         android:foreground="@drawable/places_folder"
         android:onClick="upgradeYourAccount"
-        android:text="Places"
+        android:text="@string/Places"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPeople" />
 
@@ -185,7 +185,8 @@ http://schemas.android.com/tools ">
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_icon" />
+        app:srcCompat="@drawable/profile_icon"
+        android:contentDescription="@string/TODO" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

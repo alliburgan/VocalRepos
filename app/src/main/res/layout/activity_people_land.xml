@@ -10,6 +10,83 @@
     tools:context=".FoodActivity">
 
     <Button
+        android:id="@+id/btnFriend"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="@string/Friend"
+        android:text="@string/Friend"
+        app:layout_constraintStart_toEndOf="@+id/btnPoliceOfficer"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeacher" />
+
+    <Button
+        android:id="@+id/btnPoliceOfficer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Police Officer"
+        android:text="Police Officer"
+        app:layout_constraintStart_toEndOf="@+id/btnUncle"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeacher" />
+
+    <Button
+        android:id="@+id/btnUncle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Uncle"
+        android:text="Uncle"
+        app:layout_constraintStart_toStartOf="@+id/btnDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeacher" />
+
+    <Button
+        android:id="@+id/btnAunt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="Aunt"
+        android:text="Aunt"
+        app:layout_constraintStart_toEndOf="@+id/btnGrandfather"
+        app:layout_constraintTop_toBottomOf="@+id/btnMom" />
+
+    <Button
+        android:id="@+id/btnGrandmother"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="grandmother"
+        android:text="grandmother"
+        app:layout_constraintStart_toEndOf="@+id/btnGrandfather"
+        app:layout_constraintTop_toBottomOf="@+id/btnMom" />
+
+    <Button
+        android:id="@+id/btnGrandfather"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000000"
+        android:onClick="btnClick"
+        android:tag="grandfather"
+        android:text="Grandfather"
+        app:layout_constraintStart_toEndOf="@+id/btnI"
+        app:layout_constraintTop_toBottomOf="@+id/btnMom" />
+
+    <Button
         android:id="@+id/btnGo"
         android:layout_width="113dp"
         android:layout_height="49dp"
@@ -27,11 +104,12 @@
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:text=""
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,11 +146,11 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/family"
         android:onClick="btnClick"
         android:tag="family"
+        app:layout_constraintBottom_toTopOf="@+id/btnGrandfather"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSentence"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -86,7 +164,7 @@
         android:foreground="@drawable/mom"
         android:onClick="btnClick"
         android:tag="mom"
-        app:layout_constraintBottom_toBottomOf="@+id/btnFamily"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSister"
         app:layout_constraintStart_toEndOf="@+id/btnFamily"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -99,7 +177,7 @@
         android:foreground="@drawable/sister"
         android:onClick="btnClick"
         android:tag="sister"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMom"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDad"
         app:layout_constraintStart_toEndOf="@+id/btnMom"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -108,7 +186,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/brother"
         android:onClick="btnClick"
@@ -122,7 +200,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#000000"
         android:foreground="@drawable/dad"
         android:onClick="btnClick"
@@ -166,7 +244,7 @@
         android:backgroundTint="#000000"
         android:onClick="btnClick"
         android:tag="I"
-        android:text="I"
+        android:text="@string/I"
         app:layout_constraintStart_toEndOf="@+id/btnTeacher"
         app:layout_constraintTop_toBottomOf="@+id/btnMom" />
 

@@ -26,13 +26,6 @@ class FoodActivity : AppCompatActivity() {
         // run the makeSentence method
         makeSentence()
 
-        // first attempt at using audio files
-        //var sounds = MediaPlayer.create(this, R.raw.friend)
-
-        // volume glitch?
-        //volumeControlStream = AudioManager.STREAM_MUSIC
-
-
         val sounds: MediaPlayer?
 
         when {

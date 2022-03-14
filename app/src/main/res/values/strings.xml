@@ -34,6 +34,7 @@
     <string name="People">people</string>
     <string name="Verbs">verbs</string>
     <string name="Is">is</string>
+    <string name="I">i</string>
     <string name="Do">do</string>
     <string name="Need">need</string>
     <string name="Have">have</string>
@@ -47,4 +48,13 @@
     <string name="Username">Username</string>
     <string name="Custom">Custom</string>
     <string name="Places">Places</string>
+    <string name="TODO">TODO</string>
+    <string name="stop">stop</string>
+    <string name="Holidays">Holidays</string>
+    <string name="Travel">travel</string>
+    <string name="vacation">vacation</string>
+    <string name="PurchaseaWordPackage">Purchase a Word Package</string>
+    <string name="InAppPurchases">In App Purchases</string>
+    <string name="UpgradeToPremium">Upgrade to Premium</string>
+    <string name="PurchasePackages">Purchase Selected Package(s)</string>
 </resources>
